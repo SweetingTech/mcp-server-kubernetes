@@ -693,6 +693,7 @@ if (process.env.ENABLE_UNSAFE_SSE_TRANSPORT) {
 } else {
   const transport = new StdioServerTransport();
   await server.connect(transport);
+  console.log('Kubernetes MCP server running on stdio');
 }
 
 ["SIGINT", "SIGTERM"].forEach((signal) => {
